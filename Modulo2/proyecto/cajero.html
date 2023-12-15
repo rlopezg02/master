@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="cajero.css">
+  <title>Cajero Bancario</title>
+</head>
+<body>
+
+<div class="cajero" id="cajero">
+  <h2>Cajero Bancario</h2>
+  
+  <label for="selectUsuario">Selecciona un usuario:</label>
+  <select id="selectUsuario" class="form-control mb-3" onchange="cambiarUsuario()">
+    <option value="Ricardo">Ricardo</option>
+    <option value="Isabella">Isabella</option>
+    <option value="Joss">Joss</option>
+  </select>
+
+  <p>Saldo actual: <span id="saldo-valor">$200</span></p>
+
+  <div class="botones">
+    <p>Ingrese la cantidad:</p>
+    <input type="number" class="form-control mb-3" placeholder="MXN" id="cantidad-input">
+    <button type="button" class="btn btn-primary btn-sm" onclick="realizarTransaccion('retirar')">Retirar</button>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="realizarTransaccion('depositar')">Depositar</button>
+  </div>
+
+</div>
+
+<script src="cajero.js"></script>
+</body>
+</html>
